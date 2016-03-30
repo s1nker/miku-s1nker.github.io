@@ -1,0 +1,741 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Amerigo BT W03", georgia, times;
+	text-align: center;
+}
+.background {
+	height: 500px;
+	background-color: #aaa;
+}
+.container {
+	margin: 10em auto;
+	display: inline-block;
+}
+#doll1 {
+	font-size: 16px;
+}
+#head {
+	position: relative;
+	width: 10em;
+	height: 0;
+	border-top: 6em solid #fff1cb;
+	border-right: 1.5em solid transparent;
+	border-bottom: none;
+	border-left: 1.5em solid transparent;
+	z-index: 21;
+	animation: nodding 5s infinite;
+}
+@keyframes nodding {
+	0% {
+	transform: rotate(0);
+}
+20% {
+	transform: rotate(0);
+}
+40% {
+	transform: rotate(-5deg);
+}
+50% {
+	transform: rotate(-5deg);
+}
+80% {
+	transform: rotate(0);
+}
+100% {
+	transform: rotate(9);
+}
+}#head::before {
+	content: "";
+	position: absolute;
+	top: -11em;
+	left: -1.5em;
+	width: 13em;
+	height: 5em;
+	background-color: #fff1cb;
+	border-radius: 7em 7em 0 0 / 5em 5em 0 0;
+}
+#head::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10em;
+	height: 2em;
+	background-color: #fff1cb;
+	border-radius: 0 0 5em 5em / 0 0 2em 2em;
+}
+#body {
+	position: relative;
+	top: 1.8em;
+	left: 3.5em;
+	height: 0;
+	width: 4em;
+	border-top: none;
+	border-right: 1em solid transparent;
+	border-bottom: 5em solid #fff1cb;
+	border-left: 1em solid transparent;
+	border-radius: 2em 2em 0 0;
+	z-index: 1;
+	animation: shaking 5s infinite;
+}
+@keyframes shaking {
+	0% {
+	transform: rotate(0);
+}
+20% {
+	transform: rotate(0);
+}
+40% {
+	transform: rotate(5deg);
+}
+50% {
+	transform: rotate(5deg);
+}
+80% {
+	transform: rotate(0);
+}
+100% {
+	transform: rotate(9);
+}
+}#body::after {
+	content: "";
+	position: absolute;
+	top: 5em;
+	left: -1em;
+	width: 6em;
+	height: 1em;
+	background-color: #fff1cb;
+	border-radius: 0 0 3em 3em / 0 0 1em 1em;
+}
+#body .hand {
+	position: absolute;
+	width: 1em;
+	height: 5em;
+	background-color: #fff1cb;
+}
+#body .hand::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 5em;
+	width: 1em;
+	height: .5em;
+	background-color: #fff1cb;
+	border-radius: 0 0 .5em .5em / 0 0 .5em .5em;
+}
+#body .hand.left {
+	top: .2em;
+	left: -1.3em;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+}
+#body .hand.right {
+	top: .2em;
+	left: 4.3em;
+	transform: rotate(330deg);
+	-webkit-transform: rotate(330deg);
+}
+#feet {
+	position: relative;
+}
+#feet .foot {
+	position: absolute;
+	width: 1em;
+	border-top: 2.5em solid #fff1cb;
+	border-right: .3em solid transparent;
+	border-left: .3em solid transparent;
+}
+#feet .foot::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1em;
+	height: .5em;
+	background-color: #fff1cb;
+	border-radius: 0 0 .5em .5em / 0 0 .5em .5em;
+}
+#feet .foot.left {
+	top: 2.5em;
+	left: 4.3em;
+}
+#feet .foot.right {
+	top: 2.5em;
+	left: 7.2em;
+}
+#head .eye {
+	position: absolute;
+	width: 3em;
+	height: 3.5em;
+	background-color: #fff;
+	z-index: 25;
+}
+#head .eye::before {
+	content: "";
+	position: absolute;
+	top: .2em;
+	left: 1em;
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	background-color: #fff;
+	z-index: 27;
+}
+#head .eye.left::after {
+	content: "";
+	position: absolute;
+	top: -1em;
+	left: -1.1em;
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	border-top: .2em solid transparent;
+	border-right: .2em solid transparent;
+	border-left: .2em solid transparent;
+	border-bottom: .2em solid #333;
+	z-index: 26;
+	transform: skew(30deg);
+	-webkit-transform: skew(30deg);
+}
+#head .eye.right::after {
+	content: "";
+	position: absolute;
+	top: -1em;
+	left: 2.7em;
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	border-top: .2em solid transparent;
+	border-right: .2em solid transparent;
+	border-left: .2em solid transparent;
+	border-bottom: .2em solid #333;
+	z-index: 26;
+	transform: skew(330deg);
+	-webkit-transform: skew(330deg);
+}
+#head .eye.left {
+	top: -4.5em;
+	left: 1em;
+	border-top: .5em solid #333;
+	border-radius: 1.2em 1.6em .8em 1.6em / 1.2em 1.6em 1.6em 1.6em;
+}
+#head .eye.right {
+	top: -4.5em;
+	left: 5.9em;
+	border-top: .5em solid #333;
+	border-radius: 1.6em 1.2em 1.6em .8em / 1.6em 1.2em 1.6em 1.6em;
+}
+#head .eye .pupil {
+	position: relative;
+	top: 0em;
+	left: 0em;
+	width: 2em;
+	height: 3.4em;
+	border-radius: 2em / 3em;
+	background-color: #333;
+	z-index: 26;
+}
+#head .eye .pupil:before {
+	position: absolute;
+	content: "";
+	top: 2em;
+	left: .2em;
+	width: 1.6em;
+	height: .8em;
+	border-radius: 0 0 .8em .8em;
+	background-color: #019ab3;
+	z-index: 27;
+}
+#head .eye .pupil:after {
+	position: absolute;
+	content: "";
+	top: 2em;
+	left: .2em;
+	width: 1.6em;
+	height: .6em;
+	border-radius: 0 0 .6em .6em;
+	background-color: #333;
+	z-index: 27;
+}
+#head .cheek {
+	position: absolute;
+	width: 2em;
+	height: 1em;
+	border-radius: 1em / .5em;
+	background-color: #f79585;
+	z-index: 22;
+}
+#head .cheek.left {
+	top: -.3em;
+	left: .5em;
+}
+#head .cheek.right {
+	top: -.3em;
+	left: 7.5em;
+}
+#head .mouth {
+	position: absolute;
+	top: -.8em;
+	left: 4.1em;
+	width: 1.2em;
+	height: 1em;
+	border-top: .2em solid transparent;
+	border-left: .2em solid transparent;
+	border-right: .2em solid transparent;
+	border-bottom: .2em solid #333;
+	border-radius: 1em;
+	z-index: 22;
+}
+#head .hair .fringe > div:not(.fringe1) {
+	position: absolute;
+	background-color: transparent;
+}
+#head .hair .fringe1 {
+	position: absolute;
+	top: -12em;
+	left: -1.5em;
+	width: 13em;
+	height: 5em;
+	background-color: #2acccc;
+	border-radius: 7em 7em 0 0 / 5em 5em 0 0;
+}
+#head .hair .fringe2 {
+	top: -10em;
+	left: 2.3em;
+	width: 2em;
+	height: 8em;
+	border-right: 2.5em solid #2acccc;
+	border-radius: 0 0 5em 0;
+	z-index: 30;
+}
+#head .hair .fringe3 {
+	top: -9em;
+	left: -1.8em;
+	width: 1.5em;
+	height: 9em;
+	border-left: 3em solid #2acccc;
+	border-radius: 0 0 0 5em;
+	z-index: 23;
+	transform: rotate(40deg);
+}
+#head .hair .fringe4 {
+	top: -8em;
+	left: 5.5em;
+	width: 3.5em;
+	height: 8em;
+	border-right: 3em solid #2acccc;
+	border-radius: 0 0 5em 0;
+	z-index: 23;
+	transform: rotate(-40deg);
+}
+#head .hair .fringe5 {
+	top: -7em;
+	left: 6.4em;
+	width: .5em;
+	height: 3em;
+	border-right: .8em solid #2acccc;
+	border-radius: 0 0 5em 0;
+	z-index: 30;
+	transform: rotate(0deg);
+}
+#head .hair .fringe6 {
+	top: -9em;
+	left: 8.4em;
+	width: 2.5em;
+	height: 7em;
+	border-right: 1.8em solid #2acccc;
+	border-radius: 0 0 5em 0;
+	z-index: 30;
+	transform: rotate(-30deg);
+}
+#head .hair .fringe7 {
+	top: -9em;
+	left: -2.6em;
+	width: 2.5em;
+	height: 7em;
+	border-left: 2em solid #2acccc;
+	border-radius: 0 0 0 5em;
+	z-index: 30;
+	transform: rotate(30deg);
+}
+#head .hair .fringe8 {
+	top: -2.5em;
+	left: -0.8em;
+	width: .5em;
+	height: 3em;
+	border-left: .8em solid #2acccc;
+	border-radius: 0 0 0 5em;
+	z-index: 10;
+	transform: rotate(-20deg);
+}
+#head .hair .ponytail.left {
+	position: absolute;
+	z-index: 25;
+}
+#head .hair .ponytail .ponytail1 {
+	position: absolute;
+	width: 3em;
+	height: 6em;
+	border-radius: 3em 3em 0 0;
+	background-color: #2acccc;
+}
+#head .hair .ponytail.left .ponytail1 {
+	top: -9em;
+	left: -5em;
+}
+#head .hair .ponytail.right .ponytail1 {
+	top: -9em;
+	left: 12em;
+}
+#head .hair .ponytail .ponytail2 {
+	position: absolute;
+	width: 1em;
+	height: 8em;
+}
+#head .hair .ponytail.left .ponytail2 {
+	top: -3em;
+	left: -6em;
+	border-right: 3em solid #2acccc;
+	border-radius: 0 0 3em 0;
+}
+#head .hair .ponytail.right .ponytail2 {
+	top: -3em;
+	left: 12em;
+	border-left: 3em solid #2acccc;
+	border-radius: 0 0 0 3em;
+}
+#head .hair .ponytail .ponytail3 {
+	position: absolute;
+	width: 1em;
+	height: 6em;
+}
+#head .hair .ponytail.left .ponytail3 {
+	top: 2em;
+	left: -5.5em;
+	border-left: 2.5em solid #2acccc;
+	border-radius: 0 0 0 4em;
+	transform: rotate(10deg);
+}
+#head .hair .ponytail.right .ponytail3 {
+	top: 2em;
+	left: 12em;
+	border-right: 2.5em solid #2acccc;
+	border-radius: 0 0 4em 0;
+	transform: rotate(-10deg);
+}
+#head .hair .ponytail .ponytail4 {
+	position: absolute;
+	width: 1em;
+	height: 6em;
+}
+#head .hair .ponytail.left .ponytail4 {
+	top: 2em;
+	left: -4.5em;
+	border-right: 2em solid #2acccc;
+	border-radius: 0 0 4em 0;
+	transform: rotate(-10deg);
+}
+#head .hair .ponytail.right .ponytail4 {
+	top: 2em;
+	left: 11.5em;
+	border-left: 2em solid #2acccc;
+	border-radius: 0 0 0 4em;
+	transform: rotate(10deg);
+}
+#head .face .eyebrow {
+	position: absolute;
+	width: 1.5em;
+	height: .5em;
+	border-radius: 1em 1em 0 0;
+	background-color: #333;
+	z-index: 22;
+}
+#head .face .eyebrow::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 1.5em;
+	height: .3em;
+	border-radius: 1em 1em 0 0;
+	background-color: #fff1cb;
+}
+#head .face .eyebrow.left {
+	top: -5.5em;
+	left: 1.5em;
+}
+#head .face .eyebrow.right {
+	top: -5.5em;
+	left: 6.5em;
+}
+#head .hair .hairpin {
+	position: absolute;
+	width: .6em;
+	height: 2.5em;
+	background: #333;
+	z-index: 29;
+}
+#head .hair .hairpin.left {
+	top: -10em;
+    left: -1em;
+    transform: skew(18deg);
+}
+#head .hair .hairpin.left::before {
+	content: "";
+	position: absolute;
+	top: 0em;
+	left: -1em;
+	width: .6em;
+	height: 2.5em;
+	background: -webkit-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: -o-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	transform: skew(-36deg);
+}
+#head .hair .hairpin.left::after {
+	content: "";
+	position: absolute;
+	top: 2.5em;
+	left: -1.7em;
+	width: .6em;
+	height: 2em;
+	background: -webkit-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: -o-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	transform: skew(9deg);
+}
+#head .hair .hairpin.right {
+	top: -10em;
+    left: 10.5em;
+    transform: skew(-18deg);
+}
+#head .hair .hairpin.right::before {
+	content: "";
+	position: absolute;
+	top: 0em;
+	left: 1em;
+	width: .6em;
+	height: 2.5em;
+	background: -webkit-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: -o-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	transform: skew(36deg);
+}
+#head .hair .hairpin.right::after {
+	content: "";
+	position: absolute;
+	top: 2.5em;
+	left: 1.7em;
+	width: .6em;
+	height: 2em;
+	background: -webkit-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: -o-linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	background: linear-gradient(90deg, #333 30%, #e04e7d 30%, #e04e7d 70%, #333 0);
+	transform: skew(-9deg);
+}
+#body .collar {
+	position: absolute;
+	z-index: 13;
+}
+#body .collar.left {
+	top: -.2em;
+	left: .2em;
+	width: 0;
+	height: 0;
+	border-bottom: 1.5em solid #2aaaaa;
+	border-left: 1.2em solid transparent;
+	border-right: .5em solid transparent;
+	transform: rotate(54deg);
+}
+#body .collar.left::before {
+	content: "";
+	position: absolute;
+	top: -.1em;
+	left: -1.2em;
+	width: 0;
+	height: 0;
+	border-bottom: 1.5em solid #ddd;
+	border-left: 1.0em solid transparent;
+	border-right: .5em solid transparent;
+	z-index: 12;
+}
+#body .collar.right {
+	top: -.2em;
+	left: 2.1em;
+	width: 0;
+	height: 0;
+	border-bottom: 1.5em solid #2aaaaa;
+	border-left: .5em solid transparent;
+	border-right: 1.2em solid transparent;
+	transform: rotate(-54deg);
+}
+#body .collar.right::before {
+	content: "";
+	position: absolute;
+	top: -.1em;
+	left: -.3em;
+	width: 0;
+	height: 0;
+	border-bottom: 1.5em solid #ddd;
+	border-left: .5em solid transparent;
+	border-right: 1.0em solid transparent;
+	z-index: 12;
+}
+#body .tie {
+	position: absolute;
+	top: .5em;
+	left: 1.3em;
+	width: .8em;
+	border-top: 1em solid #2aaaaa;
+	border-left: .3em solid transparent;
+	border-right: .3em solid transparent;
+	z-index: 11;
+}
+#body .tie::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -.6em;
+	width: .8em;
+	border-bottom: 2.5em solid #2aaaaa;
+	border-left: .6em solid transparent;
+	border-right: .6em solid transparent;
+}
+#body .tie::after {
+	content: "";
+	position: absolute;
+	top: 2.5em;
+	left: -.6em;
+	border-top: .6em solid #2aaaaa;
+	border-left: 1em solid transparent;
+	border-right: 1em solid transparent;
+}
+#body .clothes {
+	position: absolute;
+	left: -.9em;
+	top: -.1em;
+	height: 0;
+	width: 4em;
+	border-top: none;
+	border-right: .9em solid transparent;
+	border-bottom: 4.5em solid #ddd;
+	border-left: .9em solid transparent;
+	border-radius: 2em 2em 0 0;
+	z-index: 10;
+}
+#body .clothes::before {
+	content: "";
+	position: absolute;
+	top: 3.9em;
+	left: -.8em;
+	width: 2.6em;
+	height: 1.2em;
+	background-color: #ddd;
+	border-right: .2em solid #2aaaaa;
+	border-bottom: .2em solid #2aaaaa;
+	transform: rotate(30deg);
+}
+#body .clothes::after {
+	content: "";
+	position: absolute;
+	top: 3.9em;
+	right: -.8em;
+	width: 2.6em;
+	height: 1.2em;
+	background-color: #ddd;
+	border-left: .2em solid #2aaaaa;
+	border-bottom: .2em solid #2aaaaa;
+	transform: rotate(-29deg);
+}
+#body .skirt {
+	position: absolute;
+	top: 4em;
+	left: -1.3em;
+	width: 5.6em;
+	height: 0;
+	border-left: .5em solid transparent;
+	border-right: .5em solid transparent;
+	border-bottom: 1.5em solid #888;
+	z-index: 9;
+}
+#body .skirt::before {
+	content: "";
+	position: absolute;
+	top: 1.5em;
+	left: -.5em;
+	width: 6.6em;
+	height: 1em;
+	background-color: #2aaaaa;
+	border-radius: 0 0 3.3em 3.3em / 0 0 1em 1em;
+}
+#body .skirt::after {
+	content: "";
+	position: absolute;
+	top: 1.5em;
+	left: -.3em;
+	width: 6.2em;
+	height: .8em;
+	background-color: #888;
+	border-radius: 0 0 3.3em 3.3em / 0 0 1em 1em;
+}
+#body .hand .sleevelet {
+	position: absolute;
+	top: 1.5em;
+	left: 0;
+	width: 1em;
+	height: 1.5em;
+	background-color: #888;
+	border-top: .2em solid #2aaaaa;
+}
+#body .hand .sleevelet::before {
+	content: "";
+	position: absolute;
+	top: 1.4em;
+	left: -.2em;
+	width: 1em;
+	border-bottom: 1.9em solid #2aaaaa;
+	border-left: .2em solid transparent;
+	border-right: .2em solid transparent;
+}
+#body .hand .sleevelet::after {
+	content: "";
+	position: absolute;
+	top: 1.4em;
+	left: -.2em;
+	width: 1em;
+	border-bottom: 1.7em solid #888;
+	border-left: .2em solid transparent;
+	border-right: .2em solid transparent;
+}
+#feet .foot .shoe {
+	position: absolute;
+	top: -1.4em;
+	left: -.2em;
+	width: 1em;
+	border-top: 1.7em solid #2aaaaa;
+	border-right: .2em solid transparent;
+	border-left: .2em solid transparent;
+	z-index: 19;
+}
+#feet .foot .shoe::before {
+	content: "";
+	position: absolute;
+	top: -1.4em;
+	left: -.2em;
+	width: 1em;
+	border-top: 1.5em solid #888;
+	border-right: .2em solid transparent;
+	border-left: .2em solid transparent;
+	z-index: 20;
+}
+#feet .foot .shoe::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1em;
+	height: .5em;
+	background-color: #888;
+	border-radius: 0 0 .5em .5em / 0 0 .5em .5em;
+}
